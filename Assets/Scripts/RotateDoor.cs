@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveObject : MonoBehaviour
+public class RotateDoor : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
     [SerializeField] Vector3 moveDirection;
@@ -27,7 +27,7 @@ public class MoveObject : MonoBehaviour
             FlipMoveDirection();
         }
 
-        gameObject.transform.Translate(moveDirection * moveSpeed);
+        gameObject.transform.Rotate(moveDirection * moveSpeed);
     }
 
     void FlipMoveDirection()
